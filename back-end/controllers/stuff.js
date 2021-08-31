@@ -29,6 +29,7 @@ exports.modifyThing = (req, res, next) => {
     { _id: req.params.id },
     { ...thingObject, _id: req.params.id }
   )
+    /*réponse 200 veut dire que la réponse est réussi en format JSON*/
     .then(() => res.status(200).json({ message: "Objet modifié !" }))
     .catch((error) => res.status(400).json({ error }));
 };
