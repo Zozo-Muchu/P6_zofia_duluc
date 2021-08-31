@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 /*cela permet de connaitre le schéma pour la création d'objet*/
-const thingSchema = mongoose.Schema({
+const SauceSchema = mongoose.Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },
   imageUrl: { type: String, required: true },
@@ -10,4 +10,4 @@ const thingSchema = mongoose.Schema({
   price: { type: Number, required: true },
 });
 
-module.exports = mongoose.model("Thing", thingSchema);
+module.exports = mongoose.model("Sauce", SauceSchema);

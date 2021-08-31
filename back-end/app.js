@@ -5,14 +5,15 @@ const express = require("express");
 notre base de données MongoDB*/
 const mongoose = require("mongoose");
 const path = require("path");
-
-const stuffRoutes = require("./routes/stuff");
+/*ajout de CORS qui permet l'accès à l'API*/
+const cors = require("cors");
+const sauceRoutes = require("./routes/sauce");
 const userRoutes = require("./routes/user");
 
 mongoose
   .connect(
     "mongodb+srv://Muchu-Zozo:Eclipse72@cluster0.xs1d5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
+    { useNewUrlParser: true, useUnifiedTopology: true }
   )
   /*apparait dans la console si connexion réussis*/
   .then(() => console.log("Connexion à MongoDB réussie !"))
@@ -43,9 +44,11 @@ app.use((req, res, next) => {
 /*utilisation de express au lieu de bodyParser, ce qui va pemettre
  que la méthode json va transformer le corps de la requête en objet javascript*/
 app.use(express.json());
+/*appel de CORS*/
+app.use(cors());
 
 app.use("/images", express.static(path.join(__dirname, "images")));
-app.use("/api/stuff", stuffRoutes);
+app.use("/api/sauce", sauceRoutes);
 app.use("/api/auth", userRoutes);
 
 /*exportation de cette constante pour que les autres fichiers puisse l'utiliser*/
