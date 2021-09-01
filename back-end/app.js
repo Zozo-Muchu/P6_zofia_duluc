@@ -48,7 +48,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/images", express.static(path.join(__dirname, "images")));
-app.use("/api/sauce", sauceRoutes);
+app.use("/api/sauces", sauceRoutes);
 app.use("/api/auth", userRoutes);
 
 /*exportation de cette constante pour que les autres fichiers puisse l'utiliser*/
