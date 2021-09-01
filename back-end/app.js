@@ -5,9 +5,8 @@ const express = require("express");
 notre base de données MongoDB*/
 const mongoose = require("mongoose");
 const path = require("path");
-/*ajout de CORS qui permet l'accès à l'API*/
 const cors = require("cors");
-const sauceRoutes = require("./routes/sauce");
+const sauceRoutes = require("./routes/Sauce");
 const userRoutes = require("./routes/user");
 
 mongoose
@@ -44,7 +43,6 @@ app.use((req, res, next) => {
 /*utilisation de express au lieu de bodyParser, ce qui va pemettre
  que la méthode json va transformer le corps de la requête en objet javascript*/
 app.use(express.json());
-/*appel de CORS*/
 app.use(cors());
 
 app.use("/images", express.static(path.join(__dirname, "images")));
