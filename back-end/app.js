@@ -1,5 +1,6 @@
 /*importation de express avec la commande require, 
 bodyParser est bientot obsolète, est remplacer par express*/
+/*Framework Web rapide, minification pour node .*/
 const express = require("express");
 /*Mongoose est un package qui facilite les interactions avec 
 notre base de données MongoDB*/
@@ -8,6 +9,9 @@ const path = require("path");
 const cors = require("cors");
 const sauceRoutes = require("./routes/Sauce");
 const userRoutes = require("./routes/user");
+/* Helmet est un module qui aide à sécuriser vos applications Express en 
+définissant divers en-têtes HTTP*/
+const helmet = require("helmet");
 
 mongoose
   .connect(
@@ -44,6 +48,7 @@ app.use((req, res, next) => {
  que la méthode json va transformer le corps de la requête en objet javascript*/
 app.use(express.json());
 app.use(cors());
+app.use(helmet());
 
 app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/api/sauces", sauceRoutes);
