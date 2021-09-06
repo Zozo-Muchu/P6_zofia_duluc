@@ -1,5 +1,7 @@
-P6_duluc_zofia
-##Projet 6 : Construisez une API sécurisée pour une application d'avis gastronomiques
+#P6_duluc_zofia  
+  
+##Projet 6 : Construisez une API sécurisée pour une application d'avis gastronomiques  
+  
 Je vous invite à lire cette fiche avant le lancement du site « Piiquante ». En suivant les étapes suivantes, la navigation sur le site sera plus optimale.
 
 #Partie 1 : Installation du serveur  
