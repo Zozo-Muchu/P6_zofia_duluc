@@ -3,7 +3,7 @@ P6_duluc_zofia
 Je vous invite à lire cette fiche avant le lancement du site « Piiquante ». En suivant les étapes suivantes, la navigation sur le site sera plus optimale.
 
 #Partie 1 : Installation du serveur
-1- Ouvrez le lien :   https://github.com/Zozo-Muchu/P6_zofia_duluc.git
+1- Ouvrez le lien :   https://github.com/Zozo-Muchu/P6_zofia_duluc.git  
 2- Clonez le dossier sur votre ordinateur.
 3- Votre ordinateur doit posséder npm et Node.js. Si vous ne les avez pas, je vous invite à aller au READ ME du projet 5 et d'y suivre les instructions (lien vers le projet 5 : https://github.com/Zozo-Muchu/P5_duluc_zofia.git). Sinon passez directement à l'étape 4.
 4- Ouvrez le dossier dans Visual Studio, et lancer un terminal. Tapez « ls ». Si vous trouvez deux dossiers du nom de « front-end et back-end » passer à l'étape 5, sinon tapez « cd » puis le nom du dossier dans lequel vous souhaitez entrer.
